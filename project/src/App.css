@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header{
+    background-color:#fbdabb;
+    padding: 1rem;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+
+}
+.header_img{
+    width: 150px;
+    height: 50px;
+}
+.header_nav{
+    
+}
+.header_nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.anc{
+    text-decoration: none;
+    color:#495e57;
+}
