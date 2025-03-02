@@ -8,8 +8,8 @@ function Header () {
             <ul>
                 <li><a href="/" className="anc">Home</a></li>
                 <li><a href="/" className="anc">About</a></li>
-                <li><a href="/" className="anc">Menu</a></li>
-                <li><a href="/" className="anc">Reservations</a></li>
+                <li><a href="/" className="anc">Contacts</a></li>
+                <li><a href="/" className="anc">Products</a></li>
                 <li><a href="/" className="anc">Order online</a></li>
                 <li><a href="/" className="anc">Login</a></li>
             </ul>
