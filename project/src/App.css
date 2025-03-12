@@ -11,7 +11,6 @@ body{
     background-color: #edefee;
 }
 .header{
-    
     padding: 1rem;
     display: flex;
     align-items:center;
@@ -44,8 +43,7 @@ body{
     transition: all 0.5s ease-out;
 }
 .header_ul li:hover::before  {
-    width: 100%;;
-
+    width: 100%;
 }
 .anc{
     text-decoration: none;
@@ -108,7 +106,7 @@ body{
 }
 .hero{
     background-color: #495e57;
-    padding: 2rem 7rem;
+    padding: 2rem 11rem;
     margin-top: 30px ;
     margin-bottom: 100px;
     display: flex;
@@ -161,6 +159,89 @@ body{
 .about_img img:hover{
     transform: scale(1.1);
 }
+.highlights{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto;
+    min-height: fit-content;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    width: 55%;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.link-to-menu .menu-btn{
+    background-color: #f4ce14;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s ease-out;
+}
+.menu-btn:hover{
+    color: #495e57
+}
+.specials{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.special{
+    background-color: #fbdabb;
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    height: fit-content;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.special img{
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.dish_info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+.dish_name{
+    display: flex;
+    justify-content: space-between;
+}
+.dish_name p{
+    color: orange;
+}
+.about_dish{
+    color: #495e57;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+.cta{
+    display: flex;
+    margin-top: 1.5rem;
+}
+.order{
+    font-weight: bold;
+}
+.order_icon{
+    margin-left: 5px;
+    margin-top: 5px;
+}
 
 
 
@@ -206,6 +287,32 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1025px) {
+    .container{
+        width:75%;
+    }
+}
 
 @media (max-width:950px) {
     .footer_nav ul {
@@ -226,6 +333,15 @@ body{
         width: 30px;
         height: 30px;
     }
+    .hero{
+        padding: 2rem 7rem;
+    }
+    .container{
+        width: 90%;
+    }
+    .dish_info{
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width:850px) {
@@ -244,6 +360,7 @@ body{
         font-size:small;
     }
 }
+
 @media (max-width:730px) {
     .hero{
         flex-direction: column-reverse;
@@ -272,6 +389,38 @@ body{
     .about_img img:hover {
         transform:none ;
     }
+    .container{
+        width: 80%;
+    }
+    .intro h1{
+        font-size: 1.5rem;
+    }
+    .link-to-menu .menu-btn{
+        font-size: 0.7rem;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .specials{
+        flex-wrap: wrap;
+    }
+    .special{
+        width: 100%;
+    }
+    .special img{
+        height:250px ;
+    }
+    .dish_name h4{
+        font-size: larger;
+    }
+    .about_dish{
+        width: 100%;
+        font-size: medium;
+        line-height: 1.5rem;
+    }
+    .order_icon{
+        margin-left: 1rem;
+    }
+
 }
 
 @media (max-width:520px) {
@@ -289,7 +438,10 @@ body{
         width: 50px;
         height: 50px;
     }
-    /** .hero{
-        flex-direction: column-reverse;
-    } **/
+    .container{
+        width: 90%;
+    }
+    .intro h1{
+        font-size: 1.3rem;
+    }
 }
