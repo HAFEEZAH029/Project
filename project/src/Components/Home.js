@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-import { MdDeliveryDining } from "react-icons/md";
+import { MdDeliveryDining, MdStarRate } from "react-icons/md";
 
 function Home () {
 
@@ -92,15 +92,108 @@ function Home () {
           </div>
         </section>
     )
+
+
+    const Testimonials = () => (
+        <section className="testimonials">
+            <h1>Testimonials</h1>
+            <div className="Cards">
+                <div className="testimonial">
+                    <div className="user">
+                        <img src="./Images/Anna.jpg" alt="profile of a user"/>
+                        <p className="user_name">Anna</p>
+                    </div>
+                    <div className="messaging">
+                        <p className="review">Review</p>
+                        <p className="message">Delicious food served in a cozy ambience. Great Experience!</p>
+                        <div className="rating">
+                            <p>Rating</p>
+                            <small>
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="testimonial">
+                    <div className="user">
+                        <img src="./Images/chris.jpg" alt="user profile"/>
+                        <p className="user_name">Chris garry</p>
+                    </div>
+                    <div className="messaging">
+                        <p className="review">Review</p>
+                        <p className="message">I really liked that their customer service is efficient.</p>
+                        <div className="rating">
+                            <p>Rating</p>
+                            <small>
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="testimonial">
+                    <div className="user">
+                        <img src="./Images/Ayisha.jpg" alt="profile of a user"/>
+                        <p className="user_name">Ayisha</p>
+                    </div>
+                    <div className="messaging">
+                        <p className="review">Review</p>
+                        <p className="message">Yummy food, friendly staff, definitely worth trying.</p>
+                        <div className="rating">
+                            <p>Rating</p>
+                            <small>
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="testimonial">
+                    <div className="user">
+                        <img src="./Images/Dan.jpg" alt="user profile"/>
+                        <p className="user_name">Dan william</p>
+                    </div>
+                    <div className="messaging">
+                        <p className="review">Review</p>
+                        <p className="message">Tasty dish, cozy vibes, highly recommended spot.</p>
+                        <div className="rating">
+                            <p>Rating</p>
+                            <small>
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            <MdStarRate className="star" />
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+
+
     return (
         <>
           <Header />
-          
+
            <main>
              <Hero />
              <Highlights />
+             <Testimonials />
            </main>
-          
+
           <Footer />
         </>
     )
