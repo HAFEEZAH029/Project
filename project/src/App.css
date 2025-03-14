@@ -320,6 +320,47 @@ body{
 .rating small .star{
     margin-right: 1px;
 }
+.banner{
+    background-image: url(./space.jpg);
+    height: 350px;
+    padding: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.banner::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.invite, .invite_info{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+}
+.invite h1{
+    font-size: 3.7rem;
+    line-height: 5.4rem;
+    color: #f4ce14;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.invite_info p{
+    color: #edefee;
+    font-size: 2.1rem;
+    font-weight: lighter;
+    line-height: 2.7rem;
+}
 
 
 
@@ -410,6 +451,14 @@ body{
     .testimonial:hover{
         transform: none;
     }
+    .invite h1{
+        font-size:4rem;
+        line-height:4.6rem ;
+    }
+    .invite_info p{
+        font-size:1.8rem ;
+        line-height: 2.3rem;
+    }
 }
 
 @media (max-width:950px) {
@@ -444,6 +493,17 @@ body{
         font-size: 0.7rem;
         width:100%;
     }
+    .banner{
+        padding: 2.3rem;
+    }
+    .invite h1{
+        font-size: 4rem;
+        line-height: 5.3rem;
+    }
+    .invite_info p{
+        font-size: 1.6rem;
+        line-height:2.7rem ;
+    }
 }
 
 @media (max-width:850px) {
@@ -460,6 +520,18 @@ body{
     }
     .about{
         font-size:small;
+    }
+    .banner{
+        padding:2rem;
+        gap: 0rem;
+    }
+    .invite h1{
+        font-size: 3.6rem;
+        line-height: 4.9rem;
+    }
+    .invite_info p{
+        font-size: 1.6rem;
+        line-height: 2.6rem;
     }
 }
 
@@ -555,7 +627,14 @@ body{
     .rating p{
         font-size: 0.8rem;
     }
-
+    .invite h1{
+        font-size: 2.9rem;
+        line-height:4.1rem ;
+    }
+    .invite_info p{
+        font-size: 1.1rem;
+        line-height:2.4rem ;
+    }
 }
 
 @media (max-width:520px) {
@@ -610,5 +689,14 @@ body{
     }
     .rating p{
         font-size: 0.8rem;
+    }
+    .banner{
+        flex-direction: column;
+        gap: 2rem;
+        height: fit-content;
+    }
+    .invite, .invite_info{
+        width: 100%;
+        text-align: center;
     }
 }
