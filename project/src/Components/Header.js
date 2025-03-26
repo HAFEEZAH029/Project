@@ -9,8 +9,7 @@ function Header () {
                  <img src="./Images/Logo.svg" alt="little lemon logo" className="header_img"/>
             </Link>
         </div>
-       
-        
+
         <nav className="header_nav">
             <ul className="header_ul">
                 <li>
