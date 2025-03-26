@@ -64,6 +64,7 @@ body{
 .footer{
     background-color: #ee9972;
     max-height: 700px;
+    margin-top: 8rem;
     padding: 3rem;
     display: flex;
     align-items: center;
@@ -345,8 +346,8 @@ body{
     z-index: 1;
 }
 .invite, .invite_info{
-    position: relative;
-    z-index: 2;
+    position:relative ;
+    z-index:2 ;
     width: 50%;
 }
 .invite h1{
@@ -361,6 +362,309 @@ body{
     font-weight: lighter;
     line-height: 2.7rem;
 }
+.bookings{
+    background-color: #495e57;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 4rem auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.bookings h1{
+    font-size: 2.5rem;
+    color: #f4ce14;
+    text-align: center;
+}
+.bookings form{
+    display: grid;
+    gap: 2.8rem;
+    width: 65%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto, 1fr, 1fr;
+}
+.radio-input-container{
+    display: inline;
+    margin-left: 10px;
+}
+.radio_container label{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.field_container label{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.input_container{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+.shadow{
+    position: relative;
+    opacity: 0.8;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px #000;
+}
+.date_input, .diners_input, .occasion_input, .time_input{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 8px #000;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    box-shadow: 8px 8px 10px #000;
+}
+.date_class input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.chosen{
+    background-color: #495e57;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: -1;
+    opacity: 1;
+}
+.chosen span{
+    font-size: 1.2rem;
+    opacity: 1;
+    color: #fff;
+}
+.placeholder{
+    background-color:#edefee;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: -1;
+    opacity: 1;
+}
+.placeholder span{
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+.form2{
+    position: relative;
+    background-color: #495e57;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+   /* transition: filter 0.3s ease; */
+}
+.blurred{
+    filter: blur(5px);
+}
+.form2 form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, 2fr;
+    gap: 3rem 5rem;
+    z-index: auto;
+}
+.contact label{
+    display: block;
+    color: #edefee;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+.contact input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    box-shadow:0px 0px 8px #000;
+    z-index: auto;
+}
+#request{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.errors_class{
+    color: #ee9972;
+    margin-top: 1rem;
+}
+.form_1_states{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form_1_state_details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem 5rem;
+    width: 100%;
+}
+
+.res_states .stored_state, .res_states .empty_state{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.stored_state{
+    color: #edefee;
+    font-size: 1.5rem;
+}
+.stored_state span{
+    margin-left: 1rem;
+}
+.empty_state{
+    color: #ee9972;
+    font-size: 1.5rem;
+}
+.sitting_space{
+    align-self: center;
+}
+.sitting_space label{
+    color: #edefee;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.submit_btn{
+    position: absolute;
+    left: 45%;
+}
+.submit_btn button{
+    background-color: #f4ce14;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: auto;
+    transition: color 0.5s ease-out;
+}
+.submit_btn button:hover{
+    color: #495e57
+}
+.user-details-container{
+    background-color: #edefee;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1.5rem;
+    align-items: center ;
+    padding: 2.5rem;
+}
+.user-details-container h2{
+    color: #495e57;
+}
+.user_details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 30px);
+    gap: 0.5rem 0rem;
+}
+.user_details p{
+    color: #495e57;
+}
+.make_changes{
+    color: #ee9972;
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.make_changes:hover{
+    color: #495e57;
+}
+.complete_process{
+    background-color: #495e57;
+    color: #edefee;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+}
+.success_message{
+    background-color: #edefee;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.success_message h2{
+    color: #495e57;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.success_message p{
+    color: #495e57;
+    font-size:1.5rem;
+    text-align: center;
+}
+.home-link .back_btn{
+    color: #ee9972;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.user-details-container, .success_message{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    border: 1px solid #495e57;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.body_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
 
 
 
@@ -435,6 +739,16 @@ body{
 
 
 
+
+
+
+
+
+@media (max-width:1090px) {
+    .user-details-container{
+        width: 70%;
+    }
+}
 
 
 @media (max-width:1025px) {
@@ -458,6 +772,9 @@ body{
     .invite_info p{
         font-size:1.8rem ;
         line-height: 2.3rem;
+    }
+    .make_changes{
+        margin-top: 2.5rem;
     }
 }
 
@@ -504,6 +821,33 @@ body{
         font-size: 1.6rem;
         line-height:2.7rem ;
     }
+    .form2{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .form_1_state_details{
+        gap: 2rem 2.5rem;
+    }
+    .success_message{
+        padding: 2rem 1rem;
+        width: 70%;
+    }
+    .success_message h2{
+       font-size: 2.2rem;
+    }
+    .success_message p{
+        font-size: 1.3rem;
+    }
+    .home-link .back_btn{
+        font-size: 1.2rem;
+    }
+    .user-details-container{
+        padding: 1.5rem;
+        width: 80%;
+    }
+    .make_changes{
+        margin-top: 1.5rem;
+    }
 }
 
 @media (max-width:850px) {
@@ -532,6 +876,37 @@ body{
     .invite_info p{
         font-size: 1.6rem;
         line-height: 2.6rem;
+    }
+    .form2{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .form2 form{
+        gap: 3rem 3.5rem;
+    }
+    .form_1_state_details{
+        gap: 1rem 1.5rem;
+    }
+    .res_states .stored_state{
+        margin-left: 0rem;
+    }
+    .res_states .stored_state, .res_states .empty_state{
+        font-size: 1.1rem;
+    }
+    .success_message{
+        padding: 3rem 1rem;
+        width: 75%;
+    }
+    .success_message h2{
+       font-size: 2rem;
+       text-align: center;
+    }
+    .success_message p{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .home-link .back_btn{
+        font-size: 1.5rem;
     }
 }
 
@@ -635,7 +1010,67 @@ body{
         font-size: 1.1rem;
         line-height:2.4rem ;
     }
+    .radio_container label{
+        font-size: 1.3rem;
+    }
+    .bookings form{
+        gap:2rem;
+        width: 80%;
+    }
+    .form2{
+        padding: 2.5rem 4rem;
+    }
+    .form2 form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .form_1_state_details{
+        gap: 2rem 4rem;
+    }
+    .res_states .stored_state, .res_states .empty_state{
+        font-size: 2rem;
+    }
+    .submit_btn{
+        left:35% ;
+    }
+    .user-details-container{
+        width: 90%;
+    }
+    .user_details{
+        font-size: 0.95rem;
+    }
 }
+
+
+@media (max-width:615px) {
+    .form_1_state_details{
+        gap: 2rem 4rem;
+    }
+    .res_states .stored_state, .res_states .empty_state{
+        font-size: 1.5rem;
+    }
+    .submit_btn{
+        left:30% ;
+    }
+    .success_message{
+        padding: 2rem 1rem;
+        width: 85%;
+    }
+    .success_message h2{
+       font-size: 1.9rem;
+    }
+    .success_message p{
+        font-size: 1.2rem;
+    }
+    .home-link .back_btn{
+        font-size: 1.2rem;
+    }
+    .user_details{
+        font-size: 0.8rem;
+    }
+}
+
 
 @media (max-width:520px) {
     .header_nav{
@@ -699,4 +1134,96 @@ body{
         width: 100%;
         text-align: center;
     }
+    .bookings{
+        padding: 2rem;
+    }
+    .bookings h1{
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .bookings form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .radio_container label{
+        font-size: 1.1rem;
+    }
+    .field_container label{
+        font-size: 1rem;
+    }
+    .form2{
+        padding: 2.5rem 2rem;
+    }
+    .form_1_state_details{
+        gap: 2rem 4rem;
+    }
+    .res_states .stored_state, .res_states .empty_state{
+        font-size: 1.2rem;
+    }
+    .submit_btn{
+        left:25% ;
+    }
+    .success_message{
+        padding: 2rem 1rem;
+        width: 75%;
+    }
+    .success_message h2{
+       font-size: 1.5rem;
+    }
+    .success_message p{
+        font-size: 1rem;
+    }
+    .user-details-container{
+        gap: 1rem;
+    }
+    .user-details-container h2{
+        text-align: center;
+    }
+    .user_details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        font-size:1.1rem;
+    }
+    .make_changes{
+        margin-top: 0rem;
+    }
+}
+
+
+@media (max-width:400px) {
+    .form_1_state_details{
+        gap: 2rem 2rem;
+    }
+    .res_states .stored_state, .res_states .empty_state{
+        font-size: 0.9rem;
+    }
+    .submit_btn{
+        left:20% ;
+    }
+    .errors_class{
+        font-size: 0.82rem;
+    }
+    .success_message{
+        width: 95%;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+     .success_message p{
+        font-size:0.9rem ;
+     }
+     .user-details-container h2{
+        font-size: 1.3rem;
+     }
+     .user_details{
+        font-size: 0.8rem;
+     }
+     .complete_process{
+        padding: 0.8rem;
+
+     }
 }
