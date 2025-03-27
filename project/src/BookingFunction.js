@@ -1,17 +1,15 @@
-
+   import { fetchAPI } from "./api";
 
 export const updateTimes = (state, action) => {
     switch(action.type) {
-        case "Update Times":
-            return ["7 : 00 PM", "8 : 00 PM", "9 : 00 PM"];
+        case "dateChanged":
+            return fetchAPI(new Date(action.date));
 
-        default:
-            throw new Error(`Unhandled action type: ${action.type}`);
+        default:  return state;
     }
 };
 
 export function initializeTimes () {
-    return [
-        "5 : 00 PM", "6 : 00 PM", "7 : 00 PM", "8 : 00 PM", "9 : 00 PM", "10:00 PM"
-     ];
+   const today = new Date();
+   return fetchAPI(today);
 };

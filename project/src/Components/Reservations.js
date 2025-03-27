@@ -31,11 +31,12 @@ function Reservations () {
     const [successmessage, setSuccessMessage] = useState(false);
     const [errors, setErrors] = useState({});
 
+
     const handleContactsChange = (e) => {
         e.preventDefault();
           setDetails((prevContacts) => ({
             ...prevContacts, [e.target.name]: e.target.value}));
-        };
+    };
 
 
     const handleChanges = (e) => {
@@ -47,7 +48,7 @@ function Reservations () {
        // e.preventDefault();
         const newDate = e.target.value;
         setDate(newDate);
-        dispatch();
+        dispatch({type:'dateChanged', date: newDate});
     };
 
     const handleSwap = () => {
@@ -179,7 +180,7 @@ function Reservations () {
 
                 <div className={`field_container date_class`}>
                     <label htmlFor="Date">Select Date</label>
-                    <div className={`input_container date-input-container`}>
+                    <div className={ date ? "shadow" : "input_container"}>
                         <input
                          className="date_input"
                          type="date"
