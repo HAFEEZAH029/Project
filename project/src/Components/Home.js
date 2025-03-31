@@ -15,7 +15,7 @@ function Home () {
                    served with a modern twist
                 </p>
                 <Link to="/reservations" className="hero_link">
-                    <button className="hero_btn">Reserve a Table</button>
+                    <button className="hero_btn" aria-label="on-click">Reserve a Table</button>
                 </Link>
             </div>
             <div className="about_img">
@@ -29,7 +29,7 @@ function Home () {
           <div className="container">
             <div className="intro">
                 <h1>This week specials!</h1>
-                <Link to="/menu" className="link-to-menu">
+                <Link to="/menu" className="link-to-menu" aria-label="on click">
                   <button className="menu-btn">Online Menu</button>
                 </Link>
             </div>

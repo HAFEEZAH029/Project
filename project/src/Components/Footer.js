@@ -36,13 +36,13 @@ function Footer () {
             <p>773-502-2700</p>
         </div>
         <nav className="foot_nav">
-              <a href="https://www.instagram.com">
-               <FaInstagram className="icons instagram"/>
+              <a href="https://www.instagram.com" aria-label="on click">
+               <FaInstagram className="icons instagram" />
               </a>
-              <a href="https://www.facebook.com">
+              <a href="https://www.facebook.com" aria-label="on click">
                <FaFacebook className="icons facebook"/>
               </a>
-              <a href="https://www.tiktok.com">
+              <a href="https://www.tiktok.com" aria-label="on click">
                <FaTiktok className="icons tiktok"/>
               </a>
         </nav>
