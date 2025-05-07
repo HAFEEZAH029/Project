@@ -27,6 +27,7 @@ const Banner = () => (
 
 const Formone = ({availableTimes, date, dateChange, reservationDetails, onDetailsChange}) => {
 
+    const today = new Date().toISOString().split('T')[0];
     const {time, diners, occasion} = reservationDetails;
 
    return (
@@ -72,6 +73,7 @@ const Formone = ({availableTimes, date, dateChange, reservationDetails, onDetail
                      name="date"
                      value={date}
                      onChange={dateChange}
+                     min={today}
                     />
 
                     {date  ? (<ShowInputDetails state={date} />) : (<SelectInputDetails icon={<MdDateRange />} text="Select Date" />)}
