@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from 'react-router-dom';
+import { MdCancel } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
 
 function Header () {
+
+const [display, setDisplay] = useState(false);
+
+
+const handleDisplay = () => {
+    if (display) {
+        setDisplay(false);
+    }
+    else
+        setDisplay(true);
+};
+
     return (
     <header className="header">
         <div className="logo_container">
@@ -11,7 +25,7 @@ function Header () {
         </div>
 
         <nav className="header_nav">
-            <ul className="header_ul">
+            <ul className={display ? "resp_ul" :"header_ul"}>
                 <li>
                     <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "anc"} >Home</NavLink>
                 </li>
@@ -33,8 +47,9 @@ function Header () {
             </ul>
         </nav>
 
-
-        <img src="./Images/Menu.svg" alt="responsive menu" className="resp_menu"/>
+        <button className="respo_btn" onClick={handleDisplay}>
+          {display ? <MdCancel className="cancel_menu" /> : <FiMenu className="resp_menu" />}
+        </button>
     </header>
     )
 }
